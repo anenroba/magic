@@ -13,6 +13,18 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        /* Definimos la animación de pulso */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        .logo-pulse {
+            animation: pulse 2.5s infinite ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-pink-100 flex flex-col items-center justify-center min-h-screen p-4">
@@ -22,7 +34,7 @@
         
         <!-- Sección del logo (se asume que el logo.png está en la misma carpeta) -->
         <div class="mb-6">
-            <img src="logo.png" alt="Logo de Inflables Magic" class="w-32 h-32 mx-auto object-cover rounded-full border-4 border-fuchsia-500">
+            <img src="logo.png" alt="Logo de Inflables Magic" class="w-32 h-32 mx-auto object-cover rounded-full border-4 border-fuchsia-500 logo-pulse">
         </div>
 
         <!-- Título principal -->
